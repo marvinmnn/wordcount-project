@@ -1,0 +1,17 @@
+
+
+<h1>The number of words recorded is  {{ count }} !</h1>
+<a href="{% url 'home' %}">start over</a>
+<h2>Compose text:</h2>
+
+{{ textforcounting}}
+
+<h2>Word count:</h2>
+
+{% for word,counttotal in sortedwords %}
+
+{{ word }} - {{ counttotal }}
+<br>
+
+
+{% endfor %}
